@@ -141,6 +141,14 @@ public:
 		}return res;
 	}
 
+        int MyStringToInt(MyString tmp) {
+		int res = 0, n;
+		for (int i = 0; i < count; i++) {
+			n = int(Mem[i]) - '0'; // вычитание «0» из ascii символа приводит к числу, которое представляет этот символ
+			res = res * 10 + n;
+		} return res;
+	}
+
 	void del(int beg, int how_much) {
 		int k = 0;
 		if (beg < count) {
