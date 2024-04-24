@@ -117,7 +117,7 @@ public:
 			p = getchar();
 			tmp.Mem[tmp.count++] = p;
 		} tmp.count--;
-		for(int i = tmp.count; i < tmp.size; i++) {
+		for (int i = tmp.count; i < tmp.size; i++) {
 			tmp.Mem[i] = ' ';
 		}
 		return in;
@@ -131,7 +131,7 @@ public:
 
 	MyString IntToString(int inpt) { // нельзя сделать конструктором тк уже есть конструктор с целочисл парам-м
 		MyString res;
-		int db=inpt; // деление
+		int db = inpt; // деление
 		int cur, i = 0; // ост от дел
 		res.count = log10(db) + 1;
 		while (db != 0) {
@@ -141,7 +141,7 @@ public:
 		}return res;
 	}
 
-        int MyStringToInt(MyString tmp) {
+	int MyStringToInt(MyString tmp) {
 		int res = 0, n;
 		for (int i = 0; i < count; i++) {
 			n = int(Mem[i]) - '0'; // вычитание «0» из ascii символа приводит к числу, которое представляет этот символ
@@ -185,11 +185,3 @@ public:
 		} return res;
 	}
 };
-
-
-
-
-
-
-
-
