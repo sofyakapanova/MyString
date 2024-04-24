@@ -42,15 +42,12 @@ int main() {
 	s1.del(1, 2);
 	cout << "s1 после удал-я 2х симв-в нач-я со 2го = " << s1 << endl;
 
+	cout << "s2 = " << s2 << endl; cout << "s3 = " << s3 << endl;
+	s3 = s2; cout << "теперь s3 = " << s3 << endl;
 
-	cout << "s2 после копир-я = " << s2.copy(0, 2) << endl;
+	s3 = s2.copy(0, 2); cout << "s3 после копир-я = " << s3 << endl;
 
-	MyString y(s1.IntToString(44));
-	cout << y << endl; cout << y + y << endl;
-
-	string h = "45";
-	MyString p(h);
-	cout << p.StrToInt() + 2 << endl;
+	MyString D(s2); cout << "MyString D(s2) = " << D << endl;
 
 	MyString st;
 	cout << "введи строку для дел-я на слова" << endl; cin >> st;
@@ -60,10 +57,14 @@ int main() {
 	int k = 0;
 	while (t.length() > 0) {
 		l = t.find(' ');
-		if (l > 0) {
-			W[k] = t.copy(0, l); k++;
-		} t.del(0, l + 1);
-	} cout << "слова строки " << endl;
+		if (l > 0) { W[k] = t.copy(0, l); k++; }
+		t.del(0, l + 1); }
+	cout << "слова строки " << endl;
 	for (int i = 0; i < k; i++) { cout << W[i] << endl; }
-	return 0;
+
+	MyString c; cout << "press c: "; cin >> c;
+	int res = c.MyStringToInt(c); cout << res << endl; cout << res + res << endl;
+
+	cout << "press chislo "; cin >> res;
+	c = c.IntToString(res); cout << c << endl; cout << c + c << endl;
 }
