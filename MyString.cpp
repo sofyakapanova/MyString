@@ -22,6 +22,8 @@ int main() {
 
 	cout << "длина 2 строки " << s2.length() << endl;
 
+	cout << "s2[2] = " << s2[2] << endl;
+
 	if (s1 > s2) {
 		cout << "Первая строка больше второй" << endl;
 	}
@@ -49,9 +51,6 @@ int main() {
 	string h = "45";
 	MyString p(h);
 	cout << p.StrToInt() + 2 << endl;
-
-	MyString s5("abcd");
-	cout << "s5 = " << s5 << " s5[1] = " << s5[1] << endl;
 
 	MyString st;
 	cout << "введи строку для дел-я на слова" << endl; cin >> st;
